@@ -6,8 +6,7 @@
     <link rel="icon" type="image/x-icon" href="TokenHorizon_Logo1R.jpg">
     <title>Login</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loginpage.css">
 </head>
 
 <body>
@@ -24,12 +23,12 @@
         <form class="form" action="login.php" method="post">
             <div class="input-group">
                 <label for="email">Email Address</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" placeholder="Enter your email..." required>
             </div>
 
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" id="password" placeholder="Enter your password..." required>
             </div>
 
             <div class="button-group">
@@ -42,7 +41,7 @@
         </form>
 
         <div class="create-account">
-            <button class="button button5"><a href="#" style="text-decoration: none; color: white;">Don't have an account? &emsp; <a style="color: cyan;">Create one now &rarr; </a></a></button>
+            <button class="button button5"><a style="text-decoration: none; color: white;">Don't have an account? &emsp; <a href="registerAccount.html" style="text-decoration: none; color: cyan;">Create one now &rarr; </a></a></button>
         </div>
 
         <div class="continue-as-guest">

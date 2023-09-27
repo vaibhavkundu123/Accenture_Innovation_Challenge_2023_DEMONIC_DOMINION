@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="TokenHorizon_Logo1R.jpg">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="registerAccount.css">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="header">
+            <h3 style="font-size: xxx-large;"><img src="TokenHorizon_Logo1R.jpg" alt="Token Horizon" width="100px" height="50px">TokenHorizon</h3>
+            <h1>Get Started</h1>
+            <p style="margin: auto; font-size: medium">Create your account below</p>
+        </div>
+
+        <form class="form" action="login.php" method="post">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email..." required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password..." required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password..." required>
+            </div>
+
+            <div id="message"></div>
+
+            <div class="button-group">
+                <button type="button" class="button" id="create-account">Create Account</button>
+            </div>
+
+        </form>
+
+        <div class="create-account">
+            <button class="button button5"><a href="loginpage.html" style="text-decoration: none; color: cyan;"> &larr; Login &emsp; <a style="text-decoration: none; color: white;">Already have an account? </a></a></button>
+        </div>
+
+        <div class="continue-as-guest">
+            <button class="button button5"><a href="#" style="text-decoration: none; color: white;">Continue as Guest</a></button>
+        </div>
+    </div>
+    
+    <script>
+        var password = document.getElementById("password");
+        var confirm_password = document.getElementById("confirm-password");
+        var message = document.getElementById("message");
+        var create_account = document.getElementById("create-account")
+
+        function validatePassword() {
+            if (confirm_password.value === "") {
+                message.innerHTML = "";
+                return;
+            }
+            if (password.value === confirm_password.value) {
+                message.innerHTML = "Passwords match!";
+                message.style.color = "green";
+                create_account.disabled = false;
+            } else {
+                message.innerHTML = "Passwords do not match.";
+                message.style.color = "red";
+                create_account.disabled = true;
+            }
+        }
+        confirm_password.addEventListener("keyup", validatePassword);
+        create_account.addEventListener("click", function() {
+            if (password.value === confirm_password.value) {
+                window.location.href = "completeProfile.html";
+            }
+        });        
+        
+    </script>
+
+</body>
+
+</html>
