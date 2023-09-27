@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="TokenHorizon_Logo1R.jpg">
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="completeProfile.css">
 </head>
+
 <body>
-    <h1>Welcome to Our Home Page</h1>
-    <p>This is a sample home page for demonstration purposes.</p>
-    
-    <h2>Contents</h2>
-    <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-    </ul>
+    <div class="container">
+        <h1>Complete Profile</h1>
+        <p>Upload a photo for us to easily identify you.</p>
+        <form action="/complete-profile" method="post">
+            <input type="file" name="photo" accept="image/*">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="text" name="age" placeholder="Your Age">
+            <input type="text" name="position" placeholder="What is your position?">
+            <input type="submit" value="Complete Profile">
+        </form>
+        <a href="/skip">Skip for Now</a>
+    </div>
 </body>
+
 </html>
