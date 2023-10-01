@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="TokenHorizon_Logo1R.jpg">
+    <title>Create Budget</title>
+    <link rel="stylesheet" href="createBudgetBegin.css">
+</head>
+
+<body style="background-color: #1A1F24;">
+    <div>
+        <h1 style="color: white;">Create Budget</h1>
+    </div>
+    <div>
+        <input type="number" id="amount" style="width: 98%;" placeholder="Amount">
+    </div>
+    <br>
+    <div id="container">
+        <form id="budget-form">
+            <input type="text" id="budget-name" style="width: 288%;" placeholder="Budget Name">
+            <input type="text" id="description" style="width: 288%;" placeholder="Description">
+            <button type="submit" id="create-budget-button" style="width: 292%; background-color: #39D2C0; color: white; font-weight: bold; cursor: pointer;">Create Budget<br><a style="color: gray;">Tap above to above to complete request</a></button>
+        </form>
+    </div>
+    <script>
+        // Get the budget form elements
+        const budgetForm = document.querySelector("#budget-form");
+        const amountInput = document.querySelector("#amount");
+        const budgetNameInput = document.querySelector("#budget-name");
+        const descriptionInput = document.querySelector("#description");
+        const createBudgetButton = document.querySelector("#create-budget-button");
+
+        // Add a submit event listener to the budget form
+        budgetForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            // Get the budget form data
+            const amount = amountInput.value;
+            const budgetName = budgetNameInput.value;
+            const description = descriptionInput.value;
+
+            // Create a new budget object
+            const budget = {
+                amount,
+                budgetName,
+                description,
+            };
+
+            // Save the budget object to the database
+            // TODO: Implement this function
+
+            // Clear the budget form
+            amountInput.value = "";
+            budgetNameInput.value = "";
+            descriptionInput.value = "";
+        });
+
+    </script>
+</body>
+
+</html>
