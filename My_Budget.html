@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="My_Budget.css">
 </head>
 <body class="body">
-    <nav class="navbar" style="background-color: #e3f2fd;">
+    <nav class="navbar">
         <!-- Navbar content -->
 
         <div class="container-fluid">
@@ -20,7 +20,7 @@
             </a>
             <nav class="nav nav-pills flex-column flex-sm-row">
                 <a class="flex-sm-fill text-sm-center nav-link" href="My_Card.html">My Card</a>
-                <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">My Budget</a>
+                <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="My_Budget.html">My Budget</a>
                 <a class="flex-sm-fill text-sm-center nav-link" href="My_profilePage.html">My Profile</a>
                 <!-- <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a> -->
             </nav>
@@ -32,18 +32,20 @@
             <div class="col">
                 <div class="container-fluid">
                     <div class="container-md" style="background-color: #111417; align-items: left;">
-                        <p class="card-title" style="color: gray;">Income</p>
+                        <p class="card-title" style="color: gray; padding-top: 3%;">Income</p>
                         <h2 class="card-text" style="color: greenyellow;">+$12,402</h2>
                         <button style="border-radius: 10%; background-color: green; color: cyan;">4.5% <i class="fa-solid fa-arrow-trend-up fa-beat-fade"></i></button>
+                        <p>&emsp;</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="container-fluid">
                     <div class="container-md" style="background-color: #111417; align-items: left;">
-                        <p class="card-title" style="color: gray;">Spending</p>
+                        <p class="card-title" style="color: gray; padding-top: 3%;">Spending</p>
                         <h2 class="card-text" style="color: red;">-$8,392</h2>
                         <button style="border-radius: 10%; background-color: rgb(91, 25, 25); color: #F06A6A;">4.5% <i class="fa-solid fa-arrow-trend-up fa-beat-fade"></i></button>
+                        <p>&emsp;</p>
                     </div>
                 </div>
             </div>
@@ -61,14 +63,14 @@
             </div>
         </div>
         <div class="row">
-            <h1 style="color: white;">$1,234</h1>
+            <h1 style="color: rgb(255, 255, 255);">$1,234</h1>
         </div>
         <div class="row">
             <div class="col">
                 <p style="color: black;">[budgetTime]</p>
             </div>
             <div class="col" style="text-align: right; margin-top: -1%;">
-                <p style="color: black;">Total Spent:&ensp;<a style="font-size:x-large; font-weight: bold;">$1,234.000</a></p>
+                <p style="color: black;">Total Spent:&ensp;<a style="font-size:x-large; font-weight: bold; color: white;">$1,234.000</a></p>
             </div>
         </div>
     </div>
@@ -138,7 +140,10 @@
             </div>
         </div>
     </div>
-    
+    <div class="icon-bg">
+        <!-- Add the Font Awesome icon inside the div -->
+        <button style="background: none; border: none;"><a href="#"><i class="fa-solid fa-list icon"></i></a></button>
+    </div>
 
 
 
